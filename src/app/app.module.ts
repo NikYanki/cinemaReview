@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from "@angular/common/http";
+import {AppRoutingModule} from "./app-routing.module";
+import {FormsModule} from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { PopularFilmsComponent } from './components/popular-films/popular-films.component';
 import { NowPlayingFilmsComponent } from './components/now-playing-films/now-playing-films.component';
-import {HttpClientModule} from "@angular/common/http";
-import {AppRoutingModule} from "./app-routing.module";
 import { HeaderComponent } from './components/header/header.component';
 import { FilmSearchComponent } from './components/film-search/film-search.component';
-import {FormsModule} from "@angular/forms";
+import {NowPlayingResolver} from "./components/now-playing-films/now-playing.resolver";
+import {PopularFilmResolver} from "./components/popular-films/popular-film.resolver";
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import {FormsModule} from "@angular/forms";
         AppRoutingModule,
         FormsModule
     ],
-  providers: [],
+  providers: [
+    NowPlayingResolver,
+    PopularFilmResolver
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

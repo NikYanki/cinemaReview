@@ -1,1 +1,4 @@
-export interface ISearchFilm{name: string, id: number}
+export interface ISearchFilm {
+  name: string,
+  id: number
+}
