@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cinemaReview';
+  setTheme():void{
+  const toggle = document.querySelector('.container')
+    toggle.classList.toggle('dark')
+  }
 }
