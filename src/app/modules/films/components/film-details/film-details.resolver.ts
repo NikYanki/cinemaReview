@@ -1,10 +1,7 @@
 import {Injectable} from '@angular/core';
-import {
-  Router, Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot, ActivatedRoute
-} from '@angular/router';
+import {Resolve, RouterStateSnapshot, ActivatedRouteSnapshot} from '@angular/router';
 import {Observable, of} from 'rxjs';
+
 import {IDetailsFilm} from "../../../../models/details.film.interface";
 import {FilmDetailsService} from "../../services/film-details.service";
 
@@ -18,8 +15,8 @@ export class FilmDetailsResolver implements Resolve<IDetailsFilm> {
 
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IDetailsFilm> | Promise<IDetailsFilm> | IDetailsFilm {
-   const id =route.params['id'];
+    const id = route.params['id'];
     return this.filmDetailsService.getFilmInformation(id)
-    }
+  }
 
 }

@@ -4,3 +4,9 @@
     <a [routerLink]="[film.id]"><p>{{film?.title}}</p></a>
   </div>
 </div>
+<div class="pag">
+  <button (click)="right()">-></button>
+  <input type="number" [(ngModel)]="page">
+  <button (click)="goTo()">go</button>
+  <button (click)="left()"><-</button>
+</div>

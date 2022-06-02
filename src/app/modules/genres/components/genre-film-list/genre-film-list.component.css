@@ -1,7 +1,8 @@
-img{
+img {
   height: 350px;
 }
-.container{
+
+.container {
   max-width: 235px;
   box-sizing: border-box;
   display: flex;
@@ -9,7 +10,8 @@ img{
   align-items: center;
   margin: 30px;
 }
-.wrap{
+
+.wrap {
   width: 95%;
   display: flex;
   flex-wrap: wrap;

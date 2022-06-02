@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Resolve, RouterStateSnapshot, ActivatedRouteSnapshot} from '@angular/router';
-import { Observable, of } from 'rxjs';
+import {Observable, of} from 'rxjs';
 
 import {IFilmResponce} from "../../models/film.responce.interface";
 import {HomePageService} from "../../services/home-page.service";
@@ -10,10 +10,10 @@ import {HomePageService} from "../../services/home-page.service";
 })
 export class NowPlayingResolver implements Resolve<IFilmResponce> {
 
-  constructor(private homePageService:HomePageService) {
+  constructor(private homePageService: HomePageService) {
   }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IFilmResponce> | Promise<IFilmResponce> | IFilmResponce {
- return this.homePageService.getNowPlayFilms()
+    return this.homePageService.getNowPlayFilms()
   }
 }

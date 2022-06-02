@@ -1,4 +1,4 @@
-export interface IDetailsFilm{
+export interface IDetailsFilm {
   adult: boolean,
   backdrop_path: string,
   belongs_to_collection: null,

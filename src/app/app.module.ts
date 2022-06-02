@@ -14,35 +14,33 @@ import {NowPlayingResolver} from "./components/now-playing-films/now-playing.res
 import {PopularFilmResolver} from "./components/popular-films/popular-film.resolver";
 import {FilmDetailsResolver} from "./modules/films/components/film-details/film-details.resolver";
 import {DeactivatorGuard} from "./modules/films/components/film-details/guard/deactivator.guard";
-import { SrarRatingComponent } from './components/srar-rating/srar-rating.component';
 
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        HomePageComponent,
-        PopularFilmsComponent,
-        NowPlayingFilmsComponent,
-        HeaderComponent,
-        FilmSearchComponent,
-        SrarRatingComponent
-    ],
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        AppRoutingModule,
-        FormsModule
-    ],
-    providers: [
-        NowPlayingResolver,
-        PopularFilmResolver,
-        FilmDetailsResolver,
-        DeactivatorGuard
-    ],
-    exports: [
-        PopularFilmsComponent
-    ],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    HomePageComponent,
+    PopularFilmsComponent,
+    NowPlayingFilmsComponent,
+    HeaderComponent,
+    FilmSearchComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule
+  ],
+  providers: [
+    NowPlayingResolver,
+    PopularFilmResolver,
+    FilmDetailsResolver,
+    DeactivatorGuard
+  ],
+  exports: [
+    PopularFilmsComponent
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

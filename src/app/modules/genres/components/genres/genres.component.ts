@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+
 import {IGenres} from "../../../../models/genres.interface";
 
 @Component({
@@ -8,13 +9,15 @@ import {IGenres} from "../../../../models/genres.interface";
   styleUrls: ['./genres.component.css']
 })
 export class GenresComponent implements OnInit {
-genres:IGenres[]
-  constructor(private activatedRoute:ActivatedRoute) { }
+  genres: IGenres[]
+
+  constructor(private activatedRoute: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe(({genresData})=>{
-      const{genres}=genresData
-      return this.genres=genres
+    this.activatedRoute.data.subscribe(({genresData}) => {
+      const {genres} = genresData
+      return this.genres = genres
     })
   }
 

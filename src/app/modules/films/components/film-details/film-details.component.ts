@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 
 import {IDetailsFilm} from "../../../../models/details.film.interface";
@@ -9,12 +9,14 @@ import {IDetailsFilm} from "../../../../models/details.film.interface";
   styleUrls: ['./film-details.component.css']
 })
 export class FilmDetailsComponent implements OnInit {
-details:IDetailsFilm
-  constructor(private activatedRoute:ActivatedRoute) { }
+  details: IDetailsFilm
+
+  constructor(private activatedRoute: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe(({filmData})=>{
-     return this.details=filmData;
+    this.activatedRoute.data.subscribe(({filmData}) => {
+      return this.details = filmData;
     })
   }
 

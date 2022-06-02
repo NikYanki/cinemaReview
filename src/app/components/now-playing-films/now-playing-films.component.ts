@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 
 import {IPopFilm} from "../../models/pop.film.interface";
@@ -9,14 +9,16 @@ import {IPopFilm} from "../../models/pop.film.interface";
   styleUrls: ['./now-playing-films.component.css']
 })
 export class NowPlayingFilmsComponent implements OnInit {
-nowPlayFilms:IPopFilm[]
-  constructor(private activatedRoute:ActivatedRoute) { }
+  nowPlayFilms: IPopFilm[]
+
+  constructor(private activatedRoute: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
-this.activatedRoute.data.subscribe(({nowFilmsData})=>{
-  const{page ,results}=nowFilmsData
-  return this.nowPlayFilms=results
-})
-}
+    this.activatedRoute.data.subscribe(({nowFilmsData}) => {
+      const {page, results} = nowFilmsData
+      return this.nowPlayFilms = results
+    })
+  }
 
 }

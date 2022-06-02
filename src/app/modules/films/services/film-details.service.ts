@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+
 import {IDetailsFilm} from "../../../models/details.film.interface";
 import {urls} from "../../../configs/urls";
 
@@ -14,6 +15,6 @@ export class FilmDetailsService {
   }
 
   getFilmInformation(id: number): Observable<IDetailsFilm> {
-    return this.httpClient.get<IDetailsFilm>(urls.mainURL + urls.detailsFilm +id+ this._apiKey)
+    return this.httpClient.get<IDetailsFilm>(urls.mainURL + urls.detailsFilm + id + this._apiKey)
   }
 }

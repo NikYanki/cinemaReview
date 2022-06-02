@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+
 import {FilmsService} from "../../services/films.service";
 import {IPopFilm} from "../../../../models/pop.film.interface";
 
@@ -9,7 +10,7 @@ import {IPopFilm} from "../../../../models/pop.film.interface";
 })
 export class FilmListComponent implements OnInit {
   page: number = 1
-  films:IPopFilm[]
+  films: IPopFilm[]
 
   constructor(private filmsService: FilmsService) {
   }
@@ -17,34 +18,36 @@ export class FilmListComponent implements OnInit {
   ngOnInit(): void {
     this.filmsService.getAllFilms(this.page).subscribe(object => {
       const {page, results} = object
-     this.films=results
+      this.films = results
     })
   }
 
   left(): void {
-    if (this.page>1&&this.page<=500){
-     --this.page
+    if (this.page > 1 && this.page <= 500) {
+      --this.page
       this.filmsService.getAllFilms(this.page).subscribe(object => {
         const {page, results} = object
-        this.films=results
+        this.films = results
       })
     }
   }
-  right():void {
-    if (this.page>0&&this.page<=500){
+
+  right(): void {
+    if (this.page > 0 && this.page <= 500) {
       ++this.page
       this.filmsService.getAllFilms(this.page).subscribe(object => {
         const {page, results} = object
-        this.films=results
+        this.films = results
       })
     }
   }
-  goTo():void {
-    if (this.page>0&&this.page<=500){
+
+  goTo(): void {
+    if (this.page > 0 && this.page <= 500) {
       this.page
       this.filmsService.getAllFilms(this.page).subscribe(object => {
         const {page, results} = object
-        this.films=results
+        this.films = results
       })
     }
   }

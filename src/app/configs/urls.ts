@@ -6,6 +6,6 @@ export const urls = {
   allFilms: '/discover/movie',
   detailsFilm: '/movie/',
   genres: '/genre/movie/list',
-  user:'https://jsonplaceholder.typicode.com/users/6',
-  genreFilmList:'/discover/movie?with_genres='
+  user: 'https://jsonplaceholder.typicode.com/users/6',
+  genreFilmList: '/discover/movie?with_genres='
 }

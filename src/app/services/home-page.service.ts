@@ -17,12 +17,14 @@ export class HomePageService {
   private _apiKey: string = 'api_key=b27ed8132cb010fa85bca929ac5b00c4';
 
   getPopularFilms(): Observable<IFilmResponce> {
-    return this.httpClient.get<IFilmResponce>(urls.mainURL+urls.popular+'?'+this._apiKey)
+    return this.httpClient.get<IFilmResponce>(urls.mainURL + urls.popular + '?' + this._apiKey)
   }
+
   getNowPlayFilms(): Observable<IFilmResponce> {
-    return this.httpClient.get<IFilmResponce>(urls.mainURL + urls.nowPlaying +'?'+this._apiKey+'&page=2')
+    return this.httpClient.get<IFilmResponce>(urls.mainURL + urls.nowPlaying + '?' + this._apiKey + '&page=2')
   }
-  getFilmsFromSarch(name:string):Observable<ISearchResponce> {
-    return this.httpClient.get<ISearchResponce>(urls.mainURL+urls.search+name+'&'+this._apiKey)
+
+  getFilmsFromSarch(name: string): Observable<ISearchResponce> {
+    return this.httpClient.get<ISearchResponce>(urls.mainURL + urls.search + name + '&' + this._apiKey)
   }
 }
