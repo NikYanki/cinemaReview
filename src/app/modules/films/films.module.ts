@@ -17,8 +17,7 @@ import {AppModule} from "../../app.module";
         CommonModule,
         FilmsRoutingModule,
         FormsModule,
-        RatingModule,
-        AppModule
+        RatingModule
     ]
 })
 export class FilmsModule { }
