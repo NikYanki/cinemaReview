@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FilmDetailsService} from "../../services/film-details.service";
 import {ActivatedRoute} from "@angular/router";
+
 import {IDetailsFilm} from "../../../../models/details.film.interface";
 
 @Component({
@@ -10,12 +10,11 @@ import {IDetailsFilm} from "../../../../models/details.film.interface";
 })
 export class FilmDetailsComponent implements OnInit {
 details:IDetailsFilm
-  constructor(private filmDetailsService:FilmDetailsService,
-              private activatedRoute:ActivatedRoute) { }
+  constructor(private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(({id})=>{
-      this.filmDetailsService.getFilmInformation(id).subscribe(details=>this.details=details)
+    this.activatedRoute.data.subscribe(({filmData})=>{
+     return this.details=filmData;
     })
   }
 

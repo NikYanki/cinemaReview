@@ -2,12 +2,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {FilmListComponent} from "./components/film-list/film-list.component";
 import {HttpClientModule} from "@angular/common/http";
+
 import {FilmsService} from "./services/films.service";
 import {FilmDetailsComponent} from "./components/film-details/film-details.component";
+import {FilmDetailsResolver} from "./components/film-details/film-details.resolver";
+import {DeactivatorGuard} from "./components/film-details/guard/deactivator.guard";
+
+
 
 const routes: Routes = [
   {path: '', component: FilmListComponent},
-  {path: ':id', component: FilmDetailsComponent}
+  {path: ':id', component: FilmDetailsComponent, resolve:{filmData:FilmDetailsResolver},canDeactivate:[DeactivatorGuard]}
 ];
 
 @NgModule({
@@ -15,6 +20,6 @@ const routes: Routes = [
     HttpClientModule
   ],
   exports: [RouterModule],
-  providers:[FilmsService]
+  providers:[FilmsService, FilmDetailsResolver,DeactivatorGuard]
 })
 export class FilmsRoutingModule { }

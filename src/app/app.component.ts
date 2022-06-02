@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cinemaReview';
-  // setTheme():void{
-  // const toggle = document.getElementById('wallpaper')
-  //   toggle.classList.toggle('dark')
-  // }
 }

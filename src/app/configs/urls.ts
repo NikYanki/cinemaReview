@@ -4,5 +4,8 @@ export const urls = {
   popular: '/movie/popular',
   search: '/search/keyword?query=',
   allFilms: '/discover/movie',
-  detailsFilm: '/movie/'
+  detailsFilm: '/movie/',
+  genres: '/genre/movie/list',
+  user:'https://jsonplaceholder.typicode.com/users/6',
+  genreFilmList:'/discover/movie?with_genres='
 }

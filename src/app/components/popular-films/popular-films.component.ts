@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {HomePageService} from "../../services/home-page.service";
+import {Component, OnInit} from '@angular/core';
 import {IPopFilm} from "../../models/pop.film.interface";
 import {ActivatedRoute} from "@angular/router";
 
@@ -9,14 +8,16 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./popular-films.component.css']
 })
 export class PopularFilmsComponent implements OnInit {
-popularFilms:IPopFilm[]
-  constructor(private activatedRoute:ActivatedRoute) { }
+  popularFilms: IPopFilm[]
+
+  constructor(private activatedRoute: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
-  this.activatedRoute.data.subscribe(({popFilmsData})=>{
-    const {page, results}=popFilmsData
-    return this.popularFilms=results
-  })
+    this.activatedRoute.data.subscribe(({popFilmsData}) => {
+      const {page, results} = popFilmsData
+      return this.popularFilms = results
+    })
 
   }
 

@@ -1,7 +1,8 @@
+
 <div class="skrol">
   <div class="container" *ngFor="let film of nowPlayFilms">
     <img src="https://image.tmdb.org/t/p/original/{{film.poster_path}}">
-    <h5>{{film.title}}</h5>
+    <a [routerLink]="[film.id]"><p>{{film.title}}</p></a>
   </div>
 </div>
 
