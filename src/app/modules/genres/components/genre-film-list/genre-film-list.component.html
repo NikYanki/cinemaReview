@@ -1,0 +1,6 @@
+<div class="wrap">
+  <div class="container" *ngFor="let film of films">
+    <img src="https://image.tmdb.org/t/p/original/{{film?.poster_path}}">
+    <a [routerLink]="[film.id]"><p>{{film?.title}}</p></a>
+  </div>
+</div>
