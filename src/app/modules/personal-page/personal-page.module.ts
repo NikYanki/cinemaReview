@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { PersonalPageRoutingModule } from './personal-page-routing.module';
-import { ProFileComponent } from './components/pro-file/pro-file.component';
+import {PersonalPageRoutingModule} from './personal-page-routing.module';
+import {ProFileComponent} from './components/pro-file/pro-file.component';
 
 
 @NgModule({
@@ -14,4 +14,5 @@ import { ProFileComponent } from './components/pro-file/pro-file.component';
     PersonalPageRoutingModule
   ]
 })
-export class PersonalPageModule { }
+export class PersonalPageModule {
+}

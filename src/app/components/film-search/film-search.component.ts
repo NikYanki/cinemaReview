@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 import {HomePageService} from "../../services/home-page.service";
 import {ISearchFilm} from "../../models/search.film.interface";
