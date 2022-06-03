@@ -37,9 +37,6 @@ import {DeactivatorGuard} from "./modules/films/components/film-details/guard/de
     FilmDetailsResolver,
     DeactivatorGuard
   ],
-  exports: [
-    PopularFilmsComponent
-  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

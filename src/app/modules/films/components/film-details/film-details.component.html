@@ -5,6 +5,7 @@
   <div class="info">
     <h3>{{details.title}}</h3>
     <p>status: {{details.status}}</p>
+    <app-rating-star [rating]="details.vote_average/2" > </app-rating-star>
     <p>reiting: {{details.vote_average}}</p>
     <p>{{details.overview}}</p>
 
