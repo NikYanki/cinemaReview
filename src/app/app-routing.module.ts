@@ -9,7 +9,6 @@ import {FilmDetailsComponent} from "./modules/films/components/film-details/film
 import {FilmDetailsResolver} from "./modules/films/components/film-details/film-details.resolver";
 import {GenreFilmListComponent} from "./modules/genres/components/genre-film-list/genre-film-list.component";
 
-
 const routes: Routes = [
   {
     path: '', component: HomePageComponent,

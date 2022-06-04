@@ -15,7 +15,6 @@ import {PopularFilmResolver} from "./components/popular-films/popular-film.resol
 import {FilmDetailsResolver} from "./modules/films/components/film-details/film-details.resolver";
 import {DeactivatorGuard} from "./modules/films/components/film-details/guard/deactivator.guard";
 
-
 @NgModule({
   declarations: [
     AppComponent,

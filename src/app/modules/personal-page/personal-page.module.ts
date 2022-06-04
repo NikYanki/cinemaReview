@@ -4,7 +4,6 @@ import {CommonModule} from '@angular/common';
 import {PersonalPageRoutingModule} from './personal-page-routing.module';
 import {ProFileComponent} from './components/pro-file/pro-file.component';
 
-
 @NgModule({
   declarations: [
     ProFileComponent
